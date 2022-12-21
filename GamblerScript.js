@@ -1,6 +1,6 @@
-const fs = require('fs');
+const fs = require("fs");
 
-fs.readFile('/Users/joe/test.txt', 'utf8', (err, data) => {
+fs.readFile("CSV\LiveMonthLiveAction.csv", "utf8", (err, data) => {
   if (err) {
     console.error(err);
     return;
