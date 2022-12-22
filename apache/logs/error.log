@@ -1,0 +1,9 @@
+[Thu Dec 22 12:29:38 2022] [notice] Apache/2.2.15 (Win32) PHP/5.2.13 configured -- resuming normal operations
+[Thu Dec 22 12:29:38 2022] [notice] Server built: Mar  4 2010 11:27:46
+[Thu Dec 22 12:29:38 2022] [notice] Parent: Created child process 13596
+[Thu Dec 22 12:29:39 2022] [notice] Child 13596: Child process is running
+[Thu Dec 22 12:29:39 2022] [notice] Child 13596: Acquired the start mutex.
+[Thu Dec 22 12:29:39 2022] [notice] Child 13596: Starting 64 worker threads.
+[Thu Dec 22 12:29:39 2022] [notice] Child 13596: Starting thread to listen on port 8080.
+[Thu Dec 22 12:29:40 2022] [error] [client 127.0.0.1] File does not exist: C:/Temp/USBWebserver80NL/root/favicon.ico, referer: http://localhost:8080/
+[Thu Dec 22 12:33:48 2022] [error] [client 127.0.0.1] (20023)The given path was above the root path: Cannot map GET /C:/Temp/Git/GamblingAddictor.html HTTP/1.1 to file

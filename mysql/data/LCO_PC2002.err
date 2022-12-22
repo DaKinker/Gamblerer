@@ -1,0 +1,12 @@
+131206 12:18:45 [Note] Plugin 'FEDERATED' is disabled.
+131206 12:18:45 [Note] Plugin 'InnoDB' is disabled.
+131206 12:18:52 [Note] Plugin 'FEDERATED' is disabled.
+131206 12:18:52 [Note] Plugin 'InnoDB' is disabled.
+131206 12:18:54 [Note] Event Scheduler: Loaded 0 events
+131206 12:18:54 [Note] mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.1.44-community'  socket: ''  port: 3307  MySQL Community Server (GPL)
+131206 12:19:02 [Note] Plugin 'FEDERATED' is disabled.
+131206 12:19:02 [Note] Plugin 'InnoDB' is disabled.
+131206 12:19:02 [Note] Event Scheduler: Loaded 0 events
+131206 12:19:02 [Note] mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.1.44-community'  socket: ''  port: 3307  MySQL Community Server (GPL)
