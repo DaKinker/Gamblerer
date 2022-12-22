@@ -1,0 +1,23 @@
+221222 16:53:44 [Note] Plugin 'FEDERATED' is disabled.
+221222 16:53:44 [Note] Plugin 'InnoDB' is disabled.
+221222 16:54:01 [Note] Plugin 'FEDERATED' is disabled.
+221222 16:54:01 [Note] Plugin 'InnoDB' is disabled.
+Can't start server: Bind on TCP/IP port: No such file or directory
+221222 16:54:01 [ERROR] Do you already have another mysqld server running on port: 3307 ?
+221222 16:54:01 [ERROR] Aborting
+
+221222 16:54:01 [Note] mysql/bin/mysqld_usbwv8.exe: Shutdown complete
+
+221222 16:59:22 [Note] Plugin 'FEDERATED' is disabled.
+221222 16:59:22 [Note] Plugin 'InnoDB' is disabled.
+221222 16:59:22 [Note] Event Scheduler: Loaded 0 events
+221222 16:59:22 [Note] mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.1.44-community'  socket: ''  port: 3307  MySQL Community Server (GPL)
+221222 17:04:39 [Note] Plugin 'FEDERATED' is disabled.
+221222 17:04:39 [Note] Plugin 'InnoDB' is disabled.
+Can't start server: Bind on TCP/IP port: No such file or directory
+221222 17:04:39 [ERROR] Do you already have another mysqld server running on port: 3307 ?
+221222 17:04:39 [ERROR] Aborting
+
+221222 17:04:39 [Note] mysql/bin/mysqld_usbwv8.exe: Shutdown complete
+
