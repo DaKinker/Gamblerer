@@ -1,0 +1,12 @@
+[Mon Dec 26 14:12:20 2022] [notice] Apache/2.2.15 (Win32) PHP/5.2.13 configured -- resuming normal operations
+[Mon Dec 26 14:12:20 2022] [notice] Server built: Mar  4 2010 11:27:46
+[Mon Dec 26 14:12:20 2022] [notice] Parent: Created child process 9700
+[Mon Dec 26 14:12:20 2022] [notice] Child 9700: Child process is running
+[Mon Dec 26 14:12:20 2022] [notice] Child 9700: Acquired the start mutex.
+[Mon Dec 26 14:12:20 2022] [notice] Child 9700: Starting 64 worker threads.
+[Mon Dec 26 14:12:20 2022] [notice] Child 9700: Starting thread to listen on port 8080.
+[Mon Dec 26 14:18:29 2022] [error] [client 127.0.0.1] File does not exist: F:/School/Informatica/Gamblerer/root/.CSVLiveMonthLiveAction.csv, referer: http://localhost:8080/GamblingAddictor.html
+[Mon Dec 26 14:18:52 2022] [error] [client 127.0.0.1] File does not exist: F:/School/Informatica/Gamblerer/root/CSVLiveMonthLiveAction.csv, referer: http://localhost:8080/GamblingAddictor.html
+[Mon Dec 26 14:19:21 2022] [error] [client 127.0.0.1] File does not exist: F:/School/Informatica/Gamblerer/root/rootCSVLiveMonthLiveAction.csv, referer: http://localhost:8080/GamblingAddictor.html
+[Mon Dec 26 14:19:38 2022] [error] [client 127.0.0.1] File does not exist: F:/School/Informatica/Gamblerer/root/root, referer: http://localhost:8080/GamblingAddictor.html
+[Mon Dec 26 16:38:59 2022] [error] [client 127.0.0.1] File does not exist: F:/School/Informatica/Gamblerer/root/root, referer: http://localhost:8080/GamblingAddictor.html

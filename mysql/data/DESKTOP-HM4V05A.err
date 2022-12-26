@@ -21,3 +21,15 @@ Can't start server: Bind on TCP/IP port: No such file or directory
 
 221222 17:04:39 [Note] mysql/bin/mysqld_usbwv8.exe: Shutdown complete
 
+221226 13:51:25 [Note] Plugin 'FEDERATED' is disabled.
+221226 13:51:25 [Note] Plugin 'InnoDB' is disabled.
+221226 14:12:08 [Note] Plugin 'FEDERATED' is disabled.
+221226 14:12:08 [Note] Plugin 'InnoDB' is disabled.
+221226 14:12:08 [Note] Event Scheduler: Loaded 0 events
+221226 14:12:08 [Note] mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.1.44-community'  socket: ''  port: 3307  MySQL Community Server (GPL)
+221226 14:12:19 [Note] Plugin 'FEDERATED' is disabled.
+221226 14:12:19 [Note] Plugin 'InnoDB' is disabled.
+221226 14:12:19 [Note] Event Scheduler: Loaded 0 events
+221226 14:12:19 [Note] mysql/bin/mysqld_usbwv8.exe: ready for connections.
+Version: '5.1.44-community'  socket: ''  port: 3307  MySQL Community Server (GPL)

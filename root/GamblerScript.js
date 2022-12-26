@@ -9,12 +9,11 @@ function readTextFile(file)
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
     {
-        if(rawFile.readyState === 4)
+        if (rawFile.readyState === 4)
         {
-            if(rawFile.status === 200 || rawFile.status == 0)
+            if (rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                 
             }
             //split hele file op regels om alle rijen in een apart element te krijgen
             const dataRows = allText.split("\n");
