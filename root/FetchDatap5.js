@@ -1,78 +1,48 @@
 var table;
+var table2;
+var table3;
+var table4;
+var library;
+var library2;
+var library3;
+var library4;
+var kolom;
+var welkeDatabase;
 
 function preload() {
-  //j5 functie die tabel laadt vanuit csv
-  table = loadTable("CSV/LiveMonthLiveActionShorted.csv", "csv", "header");
-  document.getElementById("Filters").style.visibility= "hidden";
-  document.getElementById("Order").style.visibility= "hidden";
-
-
-  console.log(table.getColumn("name"));
-
+  //j5 functie die tabellen laadt vanuit csv
+  table2 = loadTable("CSV/Date_and_bets.csv", "csv", "header");
+  table4 = loadTable("CSV/Financing.csv", "csv", "header");
+  table3 = loadTable("CSV/More_userdata_on_gamblers.csv", "csv", "header");
+  table = loadTable("CSV/Userdata1.csv", "csv", "header");
   }
 
-  function setup() {
+function setup() {
+  //maak library van tabellen
+  
+  library = table_to_library(table);
+  library2 = table_to_library(table2);
+  library3 = table_to_library(table3);
+  library4 = table_to_library(table4);
 
-    var library = table_to_library(table);
-    console.log(library);
-    var sortedLibrary = sortings(library, "Stake", "asc");
-    console.log(sortedLibrary);
-    displayLibrary(sortedLibrary);
-
-  }
-
-function build_HTML_table (table, tableID, parentID, classID) {
-  // create an HTML table with w3.css class with the table table
-  // table should be a p5.Table object
-  // tableID is the selector ID you want to assign to the table
-  // parentID is the element ID under which you want to locate the table
-  // classID is the class to add to the <table>
-  
- 
-  console.log("Aantal kolommen =" +table.getColumnCount() + "Aantal rijen =" +table.getRowCount());
-  console.log(table);
-  
-  // setup the table header HTML string
-  var hh ="<tr>"; // header html
-  for (var c = 0; c < table.getColumnCount(); c++) {
-    hh +="<th>" +  table.columns[c] +"</th>";
-  }
-  hh +="</tr>"
-  
-  // setup the table row HTML string
-  var rh =""; // row html
-  
-  for (var r = 0; r < table.getRowCount(); r++){
-    rh +="<tr>";
-    for (var c = 0; c < table.getColumnCount(); c++){
-      
-       // add the content of each cell
-       rh +="<td>" +  table.get(r,c) + "</td>"; 
-       
-    }
-    rh +="</tr>";
-  }
-  //console.log("cell (0,1) = " + table.get(0, 1));
-  //console.log("cell (0,0) = " + table.get(0, 0));
-  
-  var t = createElement("table", hh+rh);
-  
-//   t.addClass(classID); // add the  table class from w3.csss
-//   t.id(tableID); // sets the id for this <table>
-//   t.parent(parentID);
 }
 
-function sortings(sortArray, column, order) {
+//sorteert de database met behulp van de opgeslagen filters en de goede volgorde en stuurt dit dan naar de display functie
+function sortings(order) {
+  var sortArray = welkeDatabase;
+  var column = kolom;
+
     if (order == "desc") {
-        sortArray = sortArray.sort((a,b) => +a[column] < +b[column] ? 1 : -1);
+      sortArray = sortArray.sort((a,b) => +a[column] < +b[column] ? 1 : -1);
     } else if (order == "asc"){
         sortArray = sortArray.sort((a,b) => +a[column] > +b[column] ? 1 : -1);
     } else {
         sortArray = "sorteren doet niet";
     }
-    return sortArray;
+    displayLibrary(sortArray);
 }
 
+//zet de tabel om in een library (zie triviale problemen)
 function table_to_library(table) {
   var library_array = [];
   var library = {};
@@ -91,6 +61,7 @@ function table_to_library(table) {
   return library_array;
 }
 
+//zorgt ervoor dat de tabel ook daadwerkelijk te zien is op de site, en verwijderd de oude tabel als deze nog aanwezig is. 
 function displayLibrary(library) {
     var hh ="<tr>"; // header html
     for (var c = 0; c < Object.keys(library[0]).length; c++) {
@@ -112,16 +83,51 @@ function displayLibrary(library) {
         rh +="</tr>";
     }
 
-    var t = createElement("table", hh+rh);
+    var tables = document.getElementsByTagName('table')[0];
+
+    if (tables != null) {
+      tables.remove();
+    }
+
+    var elem = createElement("table", hh+rh);
+
+    
 }
 
+//De shower functie is de controller voor de zichtbaarheid van alle knoppen. 
 function shower(what) {
-    if (what = 0){
-        document.getElementById("Filters").style.visibility = "visible";
-    } else if (what = 1){
-        document.getElementById("Filters").style.visibility = "visible";
-    } else if (what = 2){
-        document.getElementById("Order").style.visibility = "visible";
+    if (what == 0){
+      document.getElementById("UData1").removeAttribute("hidden");
+      document.getElementById("DNBets").setAttribute("hidden", "hidden");
+      document.getElementById("UData2").setAttribute("hidden", "hidden");
+      document.getElementById("Fina").setAttribute("hidden", "hidden");
+      welkeDatabase = library
+    } else if (what == 1){
+      document.getElementById("UData1").setAttribute("hidden", "hidden");
+      document.getElementById("DNBets").removeAttribute("hidden");
+      document.getElementById("UData2").setAttribute("hidden", "hidden");
+      document.getElementById("Fina").setAttribute("hidden", "hidden")
+      welkeDatabase = library2
+
+    } else if (what == 2){
+      document.getElementById("UData1").setAttribute("hidden", "hidden");
+      document.getElementById("DNBets").setAttribute("hidden", "hidden");
+      document.getElementById("UData2").removeAttribute("hidden");
+      document.getElementById("Fina").setAttribute("hidden", "hidden")
+      welkeDatabase = library3
+
+    } else if (what == 3){
+      document.getElementById("UData1").setAttribute("hidden", "hidden");
+      document.getElementById("DNBets").setAttribute("hidden", "hidden");
+      document.getElementById("UData2").setAttribute("hidden", "hidden");
+      document.getElementById("Fina").removeAttribute("hidden");
+      welkeDatabase = library4
+
     }
-    print(what)
+}
+
+//slaat de filters op in variabeles zodat deze later gebruikt kunnen worden
+function saveColumn(kolominput) {
+  kolom = kolominput;
+  document.getElementById("Order").removeAttribute("hidden");
 }

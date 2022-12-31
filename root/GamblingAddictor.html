@@ -1,10 +1,14 @@
 <html>
+<!-- Wij gaan er bij de gebruiker vanuit dat de codebooks bekend waren voordat de data wordt gelezen-->
+
+
     <head>
-        <h1>Welcome to the Gambling System 3000™</h1>
-        <!-- <img src = "chad.png"> -->
+        <title> Gamblernator 3000 </title>
+        <h1>Welcome to the Gambling System 3000&#8482;</h1>
     </head>
     <body>
-        <p2>Waar zoek je naar?</p2>
+        <p2>What do you need more information on?</p2>
+        <!-- p5 library om tabellen invoegen makkelijker te maken-->
         <script src = "https://cdn.jsdelivr.net/npm/p5@1.5.0/lib/p5.js"></script>
         <script src = "FetchDatap5.js"></script>
         <script>
@@ -16,10 +20,50 @@
         <style link href = Style.css></style>
         
         <table id = table></table>
+        <!-- Knoppen worden pas zichtbaar na indrukken van bijbehorende database,
+            elke filterknop stuurt de bijpassende kolom naar de functie die deze opslaat om de tabel mee te sorteren.-->
+     <div id = "Databases">
+        <button onclick = shower(0)> Userdata on gamblers </button>
+        <button onclick = shower(1)> Date and bets </button>
+        <button onclick = shower(2)> More userdata on gamblers </button>
+        <button onclick = shower(3)> Financing data in different areas </button>
+    </div>
+    </br>
+    <div id = "UData1" hidden>
+        <button onclick = "saveColumn('UserID')"> UserID </button>
+        <button onclick = "saveColumn('CountryID')"> CountryID </button>
+        <button onclick = "saveColumn('LanguageID')"> LanguageID </button>
+        <button onclick = "saveColumn('Gender')"> Gender </button>
+        <button onclick = "saveColumn('UserID')"> Age </button>
+    </div>
 
-        <button onclick = shower(0) id = "Databases"> Choose a database </button>
-        <button onclick = shower(1) id = "Filters" style.visibility = "hidden"> Choose some filters </button>
-        <button onclick = shower(2) id = "Order" style.visibility = "hidden"> Ascending or descending? </button>
+    <div id = "DNBets" hidden>
+        <button onclick = "saveColumn('UserID')"> UserID </button>
+        <button onclick = "saveColumn('Date')"> Date </button>
+        <button onclick = "saveColumn('Bets')"> Bets </button>
+        <button onclick = "saveColumn('Stake')"> Stake </button>
+        <button onclick = "saveColumn('Winnings')"> Winnings </button>
+    </div>
+
+    <div id = "UData2" hidden>
+        <button onclick = "saveColumn('UserID')"> UserID </button>
+        <button onclick = "saveColumn('CountryID')"> CountryID </button>
+        <button onclick = "saveColumn('Gender')"> Gender </button>
+        <button onclick = "saveColumn('BirthYear')"> BirthYear </button>
+    </div>
+    
+    <div id = "Fina" hidden>
+        <button onclick = "saveColumn('Geographic area name')"> Geographic area name </button>
+        <button onclick = "saveColumn('Lottery Income (\$1000)')"> Lottery Income ($1,000) </button>
+        <button onclick = "saveColumn('Lottery Administration (\$1,000)')"> Lottery Administration ($1,000) </button>
+        <button onclick = "saveColumn('\% Paid Out')"> % Paid Out </button>
+    </div>
+        
+    </br>
+    <div id = "Order" hidden>
+        <button onclick = "sortings('asc')"> Ascending </button>
+        <button onclick = "sortings('desc')"> Descending </button>
+    </div>
         
     </body>
 </html>
