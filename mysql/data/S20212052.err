@@ -5,3 +5,33 @@
 Version: '5.1.44-community'  socket: ''  port: 3307  MySQL Community Server (GPL)
 221230 21:13:36 [Note] Plugin 'FEDERATED' is disabled.
 221230 21:13:36 [Note] Plugin 'InnoDB' is disabled.
+221231 14:19:02 [Note] Plugin 'FEDERATED' is disabled.
+221231 14:19:02 [Note] Plugin 'InnoDB' is disabled.
+221231 14:19:31 [Note] Plugin 'FEDERATED' is disabled.
+221231 14:19:31 [Note] Plugin 'InnoDB' is disabled.
+Can't start server: Bind on TCP/IP port: No such file or directory
+221231 14:19:31 [ERROR] Do you already have another mysqld server running on port: 3307 ?
+221231 14:19:31 [ERROR] Aborting
+
+221231 14:19:31 [Note] mysql/bin/mysqld_usbwv8.exe: Shutdown complete
+
+221231 14:19:56 [Note] Plugin 'FEDERATED' is disabled.
+221231 14:19:56 [Note] Plugin 'InnoDB' is disabled.
+Can't start server: Bind on TCP/IP port: No such file or directory
+221231 14:19:56 [ERROR] Do you already have another mysqld server running on port: 3307 ?
+221231 14:19:56 [ERROR] Aborting
+
+221231 14:19:56 [Note] mysql/bin/mysqld_usbwv8.exe: Shutdown complete
+
+221231 14:25:29 [Note] Plugin 'FEDERATED' is disabled.
+221231 14:25:29 [Note] Plugin 'InnoDB' is disabled.
+221231 14:27:31 [Note] Plugin 'FEDERATED' is disabled.
+221231 14:27:31 [Note] Plugin 'InnoDB' is disabled.
+221231 14:28:11 [Note] Plugin 'FEDERATED' is disabled.
+221231 14:28:11 [Note] Plugin 'InnoDB' is disabled.
+Can't start server: Bind on TCP/IP port: No such file or directory
+221231 14:28:11 [ERROR] Do you already have another mysqld server running on port: 3307 ?
+221231 14:28:11 [ERROR] Aborting
+
+221231 14:28:11 [Note] mysql/bin/mysqld_usbwv8.exe: Shutdown complete
+
